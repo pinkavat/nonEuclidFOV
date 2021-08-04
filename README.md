@@ -42,7 +42,15 @@ Since each grid cell within sight-range is touched exactly once, and its computa
 
 #### The "Non-Euclidean" part
 
-TODO
+The *really* interesting application of shadowmarching is this: the next grid square in the iteration is not necessarily the adjacent grid square in space.
+
+If the shadowmarcher is given arbitrary adjacency data for the grid squares, it can render distant areas of the grid as if they are close by.
+The sightline "leaps" through a "portal" (so to speak).
+
+The demo code here has a grid-world that consists of a single L-shaped "room" with two of these "portals" on two of its edges. From the shadowmarcher's point of view, the grid squares adjacent to these portals lie next to each other in space, when in fact, the square in question is on the other side of the room. The result is a sort of mirror-maze effct, where the little red avatar can see themselves leaving the "next room" as they step into it.
+
+![what the demo looks like](explanatoryImages/demo.png)
+*There is only one little red avatar, and only one room.*
 
 
 ## Installation
